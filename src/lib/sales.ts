@@ -16,7 +16,7 @@ const clean = (v: string | undefined) => {
 
 function parseCsv(text: string): Sale[] {
   const lines = text.trim().split(/\r?\n/);
-  const header = lines[0].split(",").map((h) => h.trim());
+  const header = (lines[0] ?? "").split(",").map((h) => h.trim());
   const idx = (k: string) => header.indexOf(k);
   const out: Sale[] = [];
   for (const line of lines.slice(1)) {
@@ -84,7 +84,7 @@ export function kpis(data: Sale[]) {
   };
 }
 
-export const top = (g: Group[]) => [...g].sort((a, b) => b.total - a.total)[0];
+export const top = (g: Group[]): Group => [...g].sort((a, b) => b.total - a.total)[0] ?? { name: "—", total: 0, orders: 0 };
 
 export const fmtMoney = (n: number) =>
   new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(n);
