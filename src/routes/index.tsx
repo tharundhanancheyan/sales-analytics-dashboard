@@ -1,24 +1,39 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Shell, PageHeader } from "@/components/dashboard/Layout";
+import { FilterBar } from "@/components/dashboard/FilterBar";
+import { Kpis } from "@/components/dashboard/Kpis";
+import { PersonChart, ProductChart, RegionChart, TrendChart } from "@/components/dashboard/Charts";
+import { Insights } from "@/components/dashboard/Insights";
+import { SalesTable } from "@/components/dashboard/SalesTable";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Sales Analytics Dashboard" },
+      { name: "description", content: "Interactive sales performance analysis with KPIs, filters, charts and insights." },
+      { property: "og:title", content: "Sales Analytics Dashboard" },
+      { property: "og:description", content: "Interactive sales performance analysis with KPIs, filters, charts and insights." },
+    ],
+  }),
+  component: Dashboard,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Dashboard() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <Shell>
+      <PageHeader title="Sales Analytics Dashboard" subtitle="Interactive Sales Performance Analysis" />
+      <FilterBar />
+      <Kpis />
+      <div className="grid gap-4 lg:grid-cols-2">
+        <RegionChart />
+        <ProductChart />
+        <PersonChart />
+        <TrendChart />
+      </div>
+      <div className="mt-4 space-y-4">
+        <Insights />
+        <SalesTable />
+      </div>
+    </Shell>
   );
 }

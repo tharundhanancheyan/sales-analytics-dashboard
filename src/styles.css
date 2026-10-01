@@ -142,3 +142,40 @@
     color: var(--color-foreground);
   }
 }
+
+/* Sales Analytics theme — IBM-inspired */
+:root {
+  --radius: 0.25rem;
+  --background: oklch(0.975 0.004 250);
+  --foreground: oklch(0.2 0.02 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.02 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.02 260);
+  --primary: oklch(0.53 0.21 262);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.94 0.012 255);
+  --secondary-foreground: oklch(0.25 0.03 260);
+  --muted: oklch(0.95 0.006 255);
+  --muted-foreground: oklch(0.5 0.02 260);
+  --accent: oklch(0.93 0.03 262);
+  --accent-foreground: oklch(0.3 0.12 262);
+  --border: oklch(0.9 0.008 255);
+  --input: oklch(0.88 0.01 255);
+  --ring: oklch(0.53 0.21 262);
+  --chart-1: oklch(0.53 0.21 262);
+  --chart-2: oklch(0.65 0.13 195);
+  --chart-3: oklch(0.6 0.2 320);
+  --chart-4: oklch(0.72 0.15 150);
+  --chart-5: oklch(0.75 0.15 70);
+  --ink: oklch(0.18 0.02 260);
+  --ink-foreground: oklch(0.97 0 0);
+}
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@utility animate-rise { animation: rise 0.5s ease-out both; }
