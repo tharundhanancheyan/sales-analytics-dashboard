@@ -23,4 +23,4 @@ An interactive business intelligence and sales performance analytics dashboard b
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/tharundhanancheyan/snap-to-screen-63.git](https://github.com/tharundhanancheyan/snap-to-screen-63.git)
+   git clone [https://github.com/tharundhanancheyan/sales-analytics-dashboard.git](https://github.com/tharundhanancheyan/sales-analytics-dashboard.git)
