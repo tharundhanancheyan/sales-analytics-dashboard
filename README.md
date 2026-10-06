@@ -1,24 +1,26 @@
-# Pixel Perfect Capture
+# SalesLens BI – Analytics Dashboard
 
-Implement exactly the screenshot and nothing else
+An interactive business intelligence and sales performance analytics dashboard built with React, TypeScript, Vite, and Tailwind CSS.
 
-This project was built with [Lovable](https://lovable.dev).
+## Features
+- **Key Metrics Overview**: Real-time cards for Total Sales, Orders, Average Order Value, and Top Region.
+- **Sales Trends**: Dynamic time-series charting showing sales trajectories.
+- **Data Quality Pipeline**: Auditing interface showcasing data cleaning, duplicate detection, and missing-value flags.
+- **Dynamic Filters**: Multi-dimension filtering by Region, Product, Salesperson, and Date Range.
 
-## Build with Lovable
+## Tech Stack
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **Build Tool**: Vite / Nitro
+- **Data Visualization**: Recharts / Chart.js
+- **Routing**: React Router / TanStack
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/eabf5c8b-c0e9-44db-bb7e-7d3bc874c731).
+## Getting Started Locally
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+### Prerequisites
+- Node.js (v18+)
+- npm
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/tharundhanancheyan/snap-to-screen-63.git](https://github.com/tharundhanancheyan/snap-to-screen-63.git)
