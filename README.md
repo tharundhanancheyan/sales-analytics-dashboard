@@ -24,3 +24,9 @@ An interactive business intelligence and sales performance analytics dashboard b
 1. Clone the repository:
    ```bash
    git clone [https://github.com/tharundhanancheyan/sales-analytics-dashboard.git](https://github.com/tharundhanancheyan/sales-analytics-dashboard.git)
+
+
+##git clone https://github.com/tharundhanancheyan/sales-analytics-dashboard.git
+##cd sales-analytics-dashboard
+##npm install
+##npm run dev
